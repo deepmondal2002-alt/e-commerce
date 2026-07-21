@@ -1,0 +1,32 @@
+{
+  "loan": {
+    "BFL2024001": {
+      "customer_name": "Amit Sharma",
+      "loan_type": "Personal",
+      "emi": 8400,
+      "emi_amount": 8400,
+      "remaining_months": 24,
+      "remaining_month": 24,
+      "outstanding_balance": 150000,
+      "next_due_date": "2026-06-05",
+      "interest_rate": 12.0,
+      "tenure_months": 36,
+      "paid_months": 12
+    }
+  },
+  "loans": {
+    "BFL2024001": {
+      "customer_name": "Amit Sharma",
+      "loan_type": "Personal",
+      "emi": 8400,
+      "emi_amount": 8400,
+      "remaining_months": 24,
+      "remaining_month": 24,
+      "outstanding_balance": 150000,
+      "next_due_date": "2026-06-05",
+      "interest_rate": 12.0,
+      "tenure_months": 36,
+      "paid_months": 12
+    }
+  }
+}
