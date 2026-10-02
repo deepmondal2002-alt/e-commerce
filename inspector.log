@@ -1,0 +1,12 @@
+npm notice run npx
+npm notice run mcp-inspector -- npx -y @modelcontextprotocol/server-everything
+Starting MCP inspector...
+
+MCP Inspector Web is up and running at:
+   http://localhost:6274?MCP_INSPECTOR_API_TOKEN=c14ed0141d6cff0eb1e85d94bf8fac25c3c8c7ba514d9177edc055b626a43ff5
+
+   Sandbox (MCP Apps): http://localhost:65094/sandbox
+
+   Auth token: c14ed0141d6cff0eb1e85d94bf8fac25c3c8c7ba514d9177edc055b626a43ff5
+
+Opening browser...

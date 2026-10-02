@@ -1,0 +1,109 @@
+{
+  "requisitions": [
+    {
+      "job_id": "REQ-101",
+      "title": "Backend Engineer",
+      "department": "Engineering",
+      "panel_ids": [
+        "PANEL-01",
+        "PANEL-02"
+      ],
+      "candidate_ids": [
+        "CAND-01",
+        "CAND-02",
+        "CAND-03"
+      ]
+    },
+    {
+      "job_id": "REQ-102",
+      "title": "Data Scientist",
+      "department": "Data & Analytics",
+      "panel_ids": [
+        "PANEL-01",
+        "PANEL-03"
+      ],
+      "candidate_ids": [
+        "CAND-04"
+      ]
+    },
+    {
+      "job_id": "REQ-103",
+      "title": "Frontend Engineer",
+      "department": "Engineering",
+      "panel_ids": [
+        "PANEL-02",
+        "PANEL-04"
+      ],
+      "candidate_ids": [
+        "CAND-05",
+        "CAND-06"
+      ]
+    }
+  ],
+  "candidates": {
+    "CAND-01": {
+      "name": "Vihaan Tiwari",
+      "email": "vihaantiwari224@gmail.com",
+      "resume_summary": "3 yrs backend, Python/FastAPI, distributed systems.",
+      "stage": "panel_interview_scheduling",
+      "is_live_test": true
+    },
+    "CAND-02": {
+      "name": "Ananya Verma",
+      "email": "ananya.verma.demo@example.com",
+      "resume_summary": "2 yrs backend, Node.js, REST APIs.",
+      "stage": "screening",
+      "is_live_test": false
+    },
+    "CAND-03": {
+      "name": "Karthik Iyer",
+      "email": "karthik.iyer.demo@example.com",
+      "resume_summary": "5 yrs backend, Java/Spring, microservices.",
+      "stage": "offer",
+      "is_live_test": false
+    },
+    "CAND-04": {
+      "name": "Priya Nair",
+      "email": "priya.nair.demo@example.com",
+      "resume_summary": "4 yrs data science, ML pipelines, MLOps.",
+      "stage": "panel_interview_scheduling",
+      "is_live_test": false
+    },
+    "CAND-05": {
+      "name": "Aman Gupta",
+      "email": "aman.gupta.demo@example.com",
+      "resume_summary": "1.5 yrs frontend, React, TypeScript.",
+      "stage": "screening",
+      "is_live_test": false
+    },
+    "CAND-06": {
+      "name": "Sneha Reddy",
+      "email": "sneha.reddy.demo@example.com",
+      "resume_summary": "3 yrs frontend, React, design systems.",
+      "stage": "panel_interview_scheduling",
+      "is_live_test": false
+    }
+  },
+  "panel": {
+    "PANEL-01": {
+      "name": "Deep mandal",
+      "email": "deepmondal823@gmail.com",
+      "role": "AI engineer"
+    },
+    "PANEL-02": {
+      "name": "Dipanjali Shukla",
+      "email": "dipanjalishukla10@gmail.com",
+      "role": "Tech Lead"
+    },
+    "PANEL-03": {
+      "name": "Arjun Mehta",
+      "email": "arjun.mehta.demo@example.com",
+      "role": "Data Science Lead"
+    },
+    "PANEL-04": {
+      "name": "Meera Krishnan",
+      "email": "meera.krishnan.demo@example.com",
+      "role": "Frontend Lead"
+    }
+  }
+}
