@@ -1,0 +1,39 @@
+# Virtual environments - never belong in an image
+.venv/
+venv/
+env/
+crewai_env/
+
+# Secrets - never bake credentials into an image
+.env
+*.env
+gcp-oauth.keys.json
+**/gcp-ouath.key.json
+*.key
+
+# VCS and CI metadata
+.git/
+.gitignore
+
+# Python caches and build artefacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+.uv-cache/
+
+# Local data stores
+chroma_db/
+**/chroma_db/
+
+# Stray artefacts accidentally committed
+inspector.log
+/1
+/1105
+/258
+/627
+
+# Notebooks
+*.ipynb
