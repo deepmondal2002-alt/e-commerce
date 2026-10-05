@@ -1,0 +1,65 @@
+name: Deployment Live CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: deployment_live
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+
+    - name: Run tests
+      env:
+        TEST_MODE: "true"
+      run: |
+        pytest -q
+
+    - name: Build Docker image
+      run: |
+        docker build . --tag deployment-live:ci
+
+    - name: Start container
+      run: |
+        docker run -d \
+          --name deployment-live-ci \
+          -p 8080:8080 \
+          -e TEST_MODE=true \
+          deployment-live:ci
+
+    - name: Health check
+      run: |
+        for i in $(seq 1 20); do
+          if curl --fail --silent http://localhost:8080/health; then
+            echo "Application healthy"
+            exit 0
+          fi
+          sleep 1
+        done
+        docker logs deployment-live-ci
+        exit 1
+
+    - name: Container logs
+      if: always()
+      run: docker logs deployment-live-ci || true
+
+    - name: Cleanup
+      if: always()
+      run: docker rm -f deployment-live-ci || true
